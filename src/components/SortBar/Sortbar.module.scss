@@ -1,0 +1,45 @@
+.wrap,
+.hidden {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(234, 234, 234, .5);
+    width: 90%;
+    margin: 10px auto;
+    overflow: visible;
+    transition: all 200ms linear;
+}
+
+.hidden {
+    transform: scale(0);
+    opacity: 0;
+    height: 0;
+    margin: 0;
+}
+
+.act,
+.pass {
+    background: white;
+    transform: scale(105%);
+    padding: 6px;
+    overflow: visible;
+    border-color: #242424;
+    display: flex;
+    align-items: center;
+    span {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    &:hover {
+        background: #646cff;
+        color: white;
+        border-color: #646cff;
+    }
+}
+
+.pass {
+    background: transparent;
+    border-color: transparent;
+    span {
+        font-weight: 400;
+    }
+}

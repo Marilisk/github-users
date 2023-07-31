@@ -1,0 +1,56 @@
+.wrap {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.chosen,
+.pageNum,
+.arrowPage
+ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    padding: 4px;
+    min-width: 20px;
+    flex: 1;
+    &:hover {
+        background: #646cff;
+        color: white;
+    }
+}
+
+.chosen {
+    font-weight: 700;
+    transform: scale(120%);
+    &:hover {
+        background: inherit;
+        color: unset;
+        cursor: auto;
+    }
+}
+
+.arrowPage {
+    &:hover {
+        background: unset;
+    }
+}
+
+.leftArrow, .rightArrow {
+    border: solid #646cff;
+    border-width: 2px 2px 0 0;    
+    border-radius: 3px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(226deg);
+    transition: all 200ms linear;
+    &:hover {
+        border-color: #242424;    
+    }
+}
+
+.rightArrow {
+    transform: rotate(45deg);
+
+}

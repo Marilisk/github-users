@@ -1,0 +1,37 @@
+
+
+.wrap {
+    border: 1px solid transparent;
+    border-bottom: 1px solid #eaeaea;
+    transition: all 200ms linear;
+    margin: 0;
+    &:hover {
+        background: rgba(234, 234, 234, .5);
+        border-left: 1px solid #eaeaea;
+        border-right: 1px solid #eaeaea;
+    }
+}
+
+.item {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.name {
+    width: 40%;
+}
+
+.avatar {
+    //flex: 1;
+    display: flex;
+    height: 40px;
+    width: 15%;
+    width: fit-content;
+    margin-right: 10px;
+
+    img {
+        border-radius: 50%;
+    }
+}

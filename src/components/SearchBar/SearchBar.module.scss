@@ -1,0 +1,27 @@
+
+
+.wrap,
+.upperWrap {
+    display: flex;
+    border: 1px solid #eaeaea;
+    background: rgba(234, 234, 234, .3);
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin-top: 40vh;
+    margin-bottom: 30px;
+    transition: margin 200ms linear;
+}
+
+.upperWrap {
+    margin-top: 5vh;
+}
+
+.bar {
+    width: 100%;
+    display: flex;
+    input {
+        width: 100%;
+    }
+}
+
