@@ -30,7 +30,7 @@ export const UserPopup: FC<IUserPopupProps> = ({ userId }: IUserPopupProps) => {
 
     if (!userData) return <div className={c.wrap}><LoadingDots /></div>
 
-    return <div className={c.wrap} id={userId}>
+    return <div className={c.wrap} id={userId} data-testid={userId}>
         <h1>{user?.login}</h1>
         <p>
             {user?.site_admin ? '' : 'Не '} является администратором

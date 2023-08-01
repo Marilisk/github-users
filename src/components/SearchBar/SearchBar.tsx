@@ -17,7 +17,7 @@ export const SearchBar = () => {
         v.length < 1 && dispatch(resetUsers())
     }
 
-    const debouncedSearch = useDebounce(query, 1000);
+    const debouncedSearch = useDebounce(query, 1500);
     useEffect(() => {
         if (debouncedSearch && query.length > 1) {
             dispatch(fetchGetUsers({ query: debouncedSearch }));

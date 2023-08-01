@@ -33,7 +33,7 @@ export const Users: FC<IUsersProps> = ({ items }) => {
 
     if (!query?.length) return null
     if (isLoading) return <Preloader />
-    if (!items.length && query.length && !isLoading) return <h1>нет результатов...</h1>
+    if (!items.length && query.length && !isLoading) return null
 
     return <div>
         {items.map((user => <UserItem key={user.id} user={user} />))}

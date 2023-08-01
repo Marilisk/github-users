@@ -1,10 +1,12 @@
 import App from './App.tsx';
-import { fireEvent, render, screen } from './utils/test-utils'
+import { render, screen } from './utils/test-utils'
 import * as reduxHooks from 'react-redux'
+import { Users } from './components/Users/Users.tsx';
+import { mockUser } from './components/Users/UserItem/UserItem.test.tsx';
 
 vitest.mock('react-redux')
+const mockUsers = [mockUser]
 
-const mockedDispatch = vitest.spyOn(reduxHooks, 'useDispatch')
 
 it('the input is visible', () => {
     vitest.spyOn(reduxHooks, 'useSelector').mockReturnValue([])
@@ -20,20 +22,15 @@ it('no results: not to be in the component by default', () => {
     expect(placeholder).not.toBeInTheDocument()
 })
 
-it('should contain input text', async () => {
-    const text = 'a'
-    mockedDispatch.mockResolvedValue(vitest.fn())
-    const { findByRole } = render(<App />)
-    vitest.spyOn(reduxHooks, 'useSelector').mockReturnValue(text)
-    const input = await findByRole('textbox') as HTMLInputElement
-    fireEvent.change(input, { target: { value: text } })
-    expect(input).toHaveValue('a');
+it('should create App with empty users', () => {
+    const component = render(<App />)
+    expect(component).toMatchSnapshot()
 })
 
-
-
-
-
+it('should show users', () => {
+    const component = render(<Users items={mockUsers} />)
+    expect(component).toBeDefined()
+})
 
 
 

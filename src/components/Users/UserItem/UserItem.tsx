@@ -10,7 +10,7 @@ interface IUserItemProps {
 export const UserItem: FC<IUserItemProps> = ({ user }: IUserItemProps) => {
 
     
-    return <div className={c.wrap} id={user.id.toString()}>
+    return <div className={c.wrap} id={user.id.toString()} data-testid={user.id.toString()}>
         <div className={c.item}>
             <div className={c.avatar}>
                 <img alt={user.login} src={user.avatar_url} />

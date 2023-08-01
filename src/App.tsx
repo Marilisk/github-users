@@ -12,8 +12,12 @@ function App() {
   return (
     <>
       <SearchBar />
-      {!!total && <h1>Результатов: {total}</h1>}
-      <Pagination />
+      {!!total && !!users.length &&
+        <>
+          <h1>Результатов: {total}</h1>
+          <Pagination />
+        </>
+      }
       <Users items={users} />
     </>
   )

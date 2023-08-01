@@ -1,7 +1,7 @@
 import { UserItem } from './UserItem'
 import { render, screen } from './../../../utils/test-utils'
 
-const mockUser = {
+export const mockUser = {
     login: 'pol',
     id: 1,
     avatar_url: 'pol',
